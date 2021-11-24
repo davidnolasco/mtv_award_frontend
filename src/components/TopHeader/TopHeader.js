@@ -1,13 +1,12 @@
 import  Title  from "../Title/Title.js";
 import './TopHeader.css';
-
+import NavBar from "../NavBar/NavBar";
 
 const TopHeader = () => (
-    <header>
+    <header className="header" >
         <Title/>
-        <section>
-            
-        </section>
+        
+        <NavBar/>
     </header>
 )
 
