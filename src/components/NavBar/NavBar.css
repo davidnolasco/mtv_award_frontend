@@ -1,0 +1,16 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.navbar-boton{
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.navbar-boton--primary{
+    background-color: #fff;
+    color: #000;
+}

@@ -1,9 +1,9 @@
 import './NavBar.css';
 
 const NavBar = () => (
-    <nav>
-        <a>Iniciar Sesion</a>
-        <a>Crear Cuenta</a>
+    <nav  className="navbar" >
+        <a className="navbar-boton" >Iniciar Sesion</a>
+        <a className="navbar-boton navbar-boton--primary" >Crear Cuenta</a>
     </nav>
 )
 

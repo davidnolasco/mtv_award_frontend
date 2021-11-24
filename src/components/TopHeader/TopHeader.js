@@ -3,8 +3,9 @@ import './TopHeader.css';
 import NavBar from "../NavBar/NavBar";
 
 const TopHeader = () => (
-    <header>
+    <header className="header" >
         <Title/>
+        
         <NavBar/>
     </header>
 )

@@ -1,0 +1,8 @@
+.title{
+    display: flex;
+    align-items: center;
+}
+.tittle-imagen{
+    width: 5rem;
+    height: 5rem;
+}

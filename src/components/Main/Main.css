@@ -1,0 +1,27 @@
+.main-container{
+    height:  calc(100vh - 10rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-imagen{
+    height: 22rem;
+    width: 22rem;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-boton{
+    background: linear-gradient(89.93deg, #2C3C91 3.92%, #3BC6F1 28.64%, #E90A89 69.41%, #F6EA00 99.94%);
+    border-radius: 8px;
+    padding:  1rem 2rem 1rem 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
