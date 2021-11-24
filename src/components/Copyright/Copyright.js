@@ -1,11 +1,9 @@
 import './Copyright.css';
 
 const Copyright = () => (
-    <section>
-        <p>
-            Copyright © FLDSMDFR 2021
-        </p>
-    </section>
+    <p>
+        Copyright © FLDSMDFR 2021
+    </p>
 )
 
 export default Copyright;
