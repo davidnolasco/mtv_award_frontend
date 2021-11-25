@@ -1,0 +1,10 @@
+.button{
+    background-color: pink;
+    height: 2rem;
+    border-radius: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-secondary);
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.form{
+    background: var(--glass-effect);
+    box-shadow: var(----shadow-morphism);
+    height: auto;
+    gap: 4rem;
+    width: 22rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 16px;
+}
+
+.form-tittle{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

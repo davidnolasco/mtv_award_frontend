@@ -1,6 +1,18 @@
 *{
-  font-family: sans-serif;
   margin:0;
   padding: 0;
   box-sizing: border-box;
+}
+
+p, section, div ,a, form{
+  font-family: sans-serif;
+}
+
+:root{
+  --background-color:#000;
+  --text-color: #fff;
+  --gradient-primary: linear-gradient(89.93deg, #2C3C91 3.92%, #3BC6F1 28.64%, #E90A89 69.41%, #F6EA00 99.94%);
+  --gradient-secondary: linear-gradient(90deg, #E90A89 0%, #3BC6F1 96.43%);
+  --glass-effect:linear-gradient(134.38deg, rgba(255, 255, 255, 0.5) 5.91%, rgba(255, 255, 255, 0.2) 74.73%);
+  --shadow-morphism: 0px 4px 40px rgba(0, 0, 0, 0.04);
 }

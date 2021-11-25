@@ -5,24 +5,20 @@ import Form from "../../Form/Form.js";
 import Input from "../../Input/Input.js";
 
 const Login = () => (
- <section>
-        <TopHeader/>    
-        <Form title="Iniciar sesión"
-              tipeBoton="submit"
-              textBoton="Iniciar"
-        > 
-         <Input tipe="text"
-        label="correo electronico"
-         ></Input>
- 
-        <Input tipe="password"
-        label="Contraseña"
-         ></Input>          
-        </Form>
-        <Footer/>
- </section>      
-    
-    
+      <section className="login"  >
+            <TopHeader />
+            <section className="login-form" >
+                  <Form title="Iniciar sesión"
+                        tipeBoton="submit"
+                        textBoton="Iniciar"
+                  >
+                  </Form>
+            </section>
+
+            <Footer />
+      </section>
+
+
 )
 
 export default Login;
