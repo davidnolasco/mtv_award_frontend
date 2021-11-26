@@ -7,4 +7,5 @@
     justify-content: center;
     background: var(--gradient-secondary);
     cursor: pointer;
+    padding: 1rem;
 }

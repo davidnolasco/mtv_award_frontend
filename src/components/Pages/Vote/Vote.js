@@ -1,6 +1,7 @@
 import TopHeader from "../../TopHeader/TopHeader.js";
 import Footer from "../../Footer/Footer.js";
 import Card from "../../Card/Card.js";
+import Button from "../../Button/Button.js";
 import "./vote.css";
 
 const Vote = () => (
@@ -53,6 +54,16 @@ const Vote = () => (
                 />
             </div>
         </section>
+
+        <section className="vote-sendsection"  >
+            <p>Si ya distribuistes tus votos.</p>
+            <p>¿Estas listo para enviarlos?</p>
+            <br/>
+            <Button
+                text="Enviar botos"
+            />
+        </section>
+
         <Footer />
     </section>
 )
