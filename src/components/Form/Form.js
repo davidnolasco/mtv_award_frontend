@@ -17,7 +17,7 @@ const Form = ({ title, tipeBoton, textBoton }) => (
       </div>
 
       <Button
-         text="Iniciar"
+         text={textBoton}
       />
    </form>
 )
