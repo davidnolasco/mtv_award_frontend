@@ -15,4 +15,5 @@ p, section, div ,a, form{
   --gradient-secondary: linear-gradient(90deg, #E90A89 0%, #3BC6F1 96.43%);
   --glass-effect:linear-gradient(134.38deg, rgba(255, 255, 255, 0.5) 5.91%, rgba(255, 255, 255, 0.2) 74.73%);
   --shadow-morphism: 0px 4px 40px rgba(0, 0, 0, 0.04);
+  --notification-warning:#F6EA00;
 }
