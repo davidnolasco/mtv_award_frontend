@@ -1,0 +1,26 @@
+.vote{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    
+}
+
+.vote-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.vote-tittle{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.vote-listcards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+}

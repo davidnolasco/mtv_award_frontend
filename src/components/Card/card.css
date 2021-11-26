@@ -1,0 +1,40 @@
+.card{
+    border-radius: 16px;
+}
+
+.card-image{
+    width: 18rem;
+    border-radius: 16px 16px 0px 0px;   
+}
+
+.card-text{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), #000000d2 60%);
+    transform: translatey(-100%);
+}
+
+.card-text p{
+    margin-left:1rem;
+}
+
+.card-footer{
+    transform: translatey(-50%);
+    color: #000;
+    background: #FFFFFF;
+    border-radius: 0px 0px 16px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+.card-buttoncircle{
+    background-color: #c4c4c4;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 2rem;
+    border-radius: 20px;
+}
