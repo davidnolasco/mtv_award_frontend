@@ -6,7 +6,7 @@ const TopHeader = () => (
     <header className="header" >
         <Title/>
         
-        <NavBar/>
+        <NavBar typeNav="Bar"/>
     </header>
 )
 

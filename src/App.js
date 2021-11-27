@@ -6,7 +6,7 @@ import WarningVote from "./components/WarningVote/WarningVote.js";
 
 function App() {
   return (
-    <WarningVote/>    
+    <Home/>    
   );
 }
 
