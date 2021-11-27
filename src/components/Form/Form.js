@@ -1,5 +1,6 @@
 import Input from "../Input/Input.js"
 import Button from "../Button/Button.js";
+import { Link } from "react-router-dom";
 import "./Form.css";
 
 const Form = ({ title, tipeBoton, textBoton }) => (
@@ -15,10 +16,10 @@ const Form = ({ title, tipeBoton, textBoton }) => (
             label="Contraseña"
          ></Input>
       </div>
-
-      <Button
+      <Link to="/users/vote"> <Button 
          text={textBoton}
-      />
+      /></Link>
+     
    </form>
 )
 

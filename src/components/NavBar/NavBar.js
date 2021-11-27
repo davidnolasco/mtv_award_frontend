@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom";
 import './NavBar.css';
+
+
 
 const NavBar = ({ typeNav = "Bar", email }) => {
     return (
         <>
             {
                 typeNav === "Bar" ?
-
                     <nav className="navbar" >
-                        <a className="navbar-boton" >Iniciar sesion</a>
-                        <a className="navbar-boton navbar-boton--primary" >Crear cuenta</a>
+                        <Link to="/users/login">  <a className="navbar-boton" >Iniciar sesión</a></Link>                      
+                        <Link to="/users/signin"> <a className="navbar-boton navbar-boton--primary" >Crear Cuenta</a></Link>
+                       
                     </nav>
 
 
