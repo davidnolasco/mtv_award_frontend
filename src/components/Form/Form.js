@@ -89,12 +89,13 @@ const Form = ({ title, tipeBoton, textBoton }) => {
                onChange={ onChangeHandler}
             ></Input>
          </div>
-         <Link to="/users/vote"> 
+
+         
             <Button
                text={textBoton}
                onClick={onBotonClickHandler}
             />
-         </Link>
+         
       
       </form>
    )
