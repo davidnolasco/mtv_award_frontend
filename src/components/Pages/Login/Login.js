@@ -2,7 +2,6 @@ import TopHeader from "../../TopHeader/TopHeader.js";
 import Footer from "../../Footer/Footer.js";
 import "./Login.css"
 import Form from "../../Form/Form.js";
-import Input from "../../Input/Input.js";
 
 const Login = () => (
       <section className="login"  >
@@ -12,7 +11,6 @@ const Login = () => (
                         tipeBoton="submit"
                         textBoton="Iniciar"
                   >
-                     
                   </Form>
             </section>
 

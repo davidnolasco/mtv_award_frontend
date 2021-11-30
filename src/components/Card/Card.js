@@ -1,9 +1,28 @@
+import React,{useEffect, useState} from "react";
 import Footer from "../Footer/Footer"
 import "./card.css";
 
 
-const Card =({urlImage, artistName, nomination}) => (
-    <div className="card" >
+const Card =({urlImage, artistName, nomination}) => {
+    
+    const [contador, setcontador] =useState(1);
+
+    function contadorrVotos(valor) {
+        
+        if(contador>20){
+            setcontador(20)
+        }else{
+            setcontador(contador+valor);
+        }
+
+        if(contador<0){
+            setcontador(0)
+        }
+        
+        console.log(contador);
+    }
+    return(
+        <div className="card" >
         <header  className="card-header" >
             <img  className="card-image" src={urlImage} alt="Imagen de la carta"/>
             <div className="card-text" >
@@ -12,12 +31,13 @@ const Card =({urlImage, artistName, nomination}) => (
             </div>
         </header>
         <footer className="card-footer" >
-            <div className="card-buttoncircle" >-</div>
-            <div>20</div>
-            <div className="card-buttoncircle" >+</div>
+            <button className="card-buttoncircle" onClick={ ()=>contadorrVotos(-1) } >-</button>
+            <p>{contador}</p>
+            <button className="card-buttoncircle" onClick={ ()=>contadorrVotos(1) } >+</button>
         </footer>       
     </div>
+    )
     
-)
+}
 
 export default Card
