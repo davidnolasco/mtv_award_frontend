@@ -1,4 +1,4 @@
-import {setJWT} from "../../utilis/axios";
+import { setJWT } from "../../utilis/axios";
 
 const initialState = {
     loginAttempts: 0,
@@ -48,6 +48,27 @@ const securityReducer = (state = initialState, action) => {
                 loginErrors: payload,
                 user: {},
                 isLogged: false
+            }
+        case "SEC_SIGNIN_FETCH":
+            return {
+                ...state,
+                isFetching: true,
+                hasErrors: false,
+                errors: []
+            }
+        case "SEC_SIGNIN_SUCCESS":
+            return {
+                ...state,
+                isFetching: false,
+                hasErrors: false,
+                errors: []
+            }
+        case "SEC_SIGNIN_ERROR":
+            return {
+                ...state,
+                isFetching: false,
+                hasErrors: true,
+                errors: [payload]
             }
         default:
             return state;
