@@ -7,10 +7,10 @@ import Button from "../../Button/Button";
 import "../../../styles/Form.css"
 import "./signin.css"
 
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { publicAxios } from "../../store/utilis/axios.js";
 
-const getSecurity = ({ security }) => security;
+//const getSecurity = ({ security }) => security;
 
 const SignIn = () => {
     const [correo, setCorreo] = useState(null);
@@ -28,7 +28,7 @@ const SignIn = () => {
         }
     }
 
-    const security = useSelector(getSecurity);
+    //const security = useSelector(getSecurity);
     const dispatch = useDispatch();
     const onBotonClickHandler = (e) => {
         e.preventDefault();

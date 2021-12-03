@@ -9,8 +9,8 @@ const NavBar = ({ typeNav = "Bar", email }) => {
             {
                 typeNav === "Bar" ?
                     <nav className="navbar" >
-                        <Link to="/users/login">  <a className="navbar-boton" >Iniciar sesión</a></Link>                      
-                        <Link to="/users/signin"> <a className="navbar-boton navbar-boton--primary" >Crear Cuenta</a></Link>
+                        <Link to="/users/login">  <p className="navbar-boton" >Iniciar sesión</p></Link>                      
+                        <Link to="/users/signin"> <p className="navbar-boton navbar-boton--primary" >Crear Cuenta</p></Link>
                        
                     </nav>
 
