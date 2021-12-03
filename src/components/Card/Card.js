@@ -3,7 +3,7 @@ import Footer from "../Footer/Footer"
 import "./card.css";
 
 
-const Card =({urlImage, artistName, nomination}) => {
+const Card =({urlImage, artistName, nomination, idNomination}) => {
     
     const [contador, setcontador] =useState(1);
 
@@ -22,7 +22,7 @@ const Card =({urlImage, artistName, nomination}) => {
         console.log(contador);
     }
     return(
-        <div className="card" >
+        <div className="card" id={idNomination} >
         <header  className="card-header" >
             <img  className="card-image" src={urlImage} alt="Imagen de la carta"/>
             <div className="card-text" >
