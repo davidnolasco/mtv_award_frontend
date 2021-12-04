@@ -7,6 +7,7 @@ import "./vote.css";
 
 import { useSelector, useDispatch } from "react-redux";
 import { fetchNominationData } from "../../store/reducers/nomination/actions";
+import { sendVotes } from "../../store/reducers/nomination/actions";
 
 const Vote = () => {
 
@@ -25,11 +26,11 @@ const Vote = () => {
         let values = document.getElementsByClassName('votesOfTheNomination')
         
         for (let i = 0; i < card.length; i++) {
-            let objeto ={id: card[i].id, votes: parseInt(values[i].innerHTML)}
+            let objeto ={idNomination: card[i].id, totalVotes: parseInt(values[i].innerHTML)}
             arreglo[i]= objeto
         }
-
-        console.log(arreglo);
+        sendVotes(dispatch, arreglo)
+        //console.log(arreglo);
     }
 
     useEffect(() => {
