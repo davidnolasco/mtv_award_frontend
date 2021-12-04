@@ -7,18 +7,29 @@ import "./vote.css";
 
 import { useSelector, useDispatch } from "react-redux";
 import { fetchNominationData } from "../../store/reducers/nomination/actions";
-//import { privateAxios } from "../../store/utilis/axios";
 
 const Vote = () => {
 
     const nomination = useSelector(({ nomination }) => nomination);
-    //const{items}=nomination;
 
 
     const dispatch = useDispatch();
     const getAll = () => {
         fetchNominationData(dispatch);
         console.log(nomination.items)
+    }
+
+    let arreglo = [6];
+    const getValues = (e) =>{
+        let card = document.getElementsByClassName('card')
+        let values = document.getElementsByClassName('votesOfTheNomination')
+        
+        for (let i = 0; i < card.length; i++) {
+            let objeto ={id: card[i].id, votes: parseInt(values[i].innerHTML)}
+            arreglo[i]= objeto
+        }
+
+        console.log(arreglo);
     }
 
     useEffect(() => {
@@ -76,7 +87,7 @@ const Vote = () => {
                 <p>Si ya distribuistes tus votos.</p>
                 <p>¿Estas listo para enviarlos?</p>
                 <br />
-                <Button
+                <Button onClick={getValues}
                     text="Enviar votos"
                 />
             </section>

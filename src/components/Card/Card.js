@@ -3,12 +3,11 @@ import React,{ useState} from "react";
 import "./card.css";
 
 
-const Card =({urlImage, artistName, nomination, idNomination, votesOfTheNomination}) => {
+const Card =({urlImage, artistName, nomination, idNomination}) => {
     
     const [contador, setcontador] =useState(1);
-    const [votos, setVotos]=useState([]);
 
-    function contadorrVotos(id,valor) {
+    function contadorrVotos(valor) {
         
         if(contador>20){
             setcontador(20)
@@ -19,14 +18,6 @@ const Card =({urlImage, artistName, nomination, idNomination, votesOfTheNominati
         if(contador<0){
             setcontador(0)
         }
-        
-        const nomination = [{
-            id: id,
-            cantidad: contador
-        }];
-        
-        setVotos(oldArray =>[...oldArray, nomination])
-        console.log(votos);
     }
     return(
         <div className="card" id={idNomination} >
@@ -38,9 +29,9 @@ const Card =({urlImage, artistName, nomination, idNomination, votesOfTheNominati
             </div>
         </header>
         <footer className="card-footer" >
-            <button className="card-buttoncircle" onClick={ ()=>contadorrVotos(idNomination,-1) } >-</button>
-            <p id="votesOfTheNomination" onChange={votesOfTheNomination} >{contador}</p>
-            <button className="card-buttoncircle" onClick={ ()=>contadorrVotos(idNomination,1) } >+</button>
+            <button className="card-buttoncircle" onClick={ ()=>contadorrVotos(-1) } >-</button>
+            <p className="votesOfTheNomination" >{contador}</p>
+            <button className="card-buttoncircle" onClick={ ()=>contadorrVotos(1) } >+</button>
         </footer>       
     </div>
     )
