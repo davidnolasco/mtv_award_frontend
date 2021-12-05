@@ -4,6 +4,7 @@ import TopHeader from "../../TopHeader/TopHeader.js";
 import Footer from "../../Footer/Footer.js";
 import Input from "../../Input/Input";
 import Button from "../../Button/Button";
+import Modal from "../../Modal/Modal";
 import "../../../styles/Form.css"
 import "./signin.css"
 
@@ -15,6 +16,11 @@ import { publicAxios } from "../../store/utilis/axios.js";
 const SignIn = () => {
     const [correo, setCorreo] = useState(null);
     const [password, setPassword] = useState(null);
+    const [modalState, setModalState] = useState(false);
+
+    const modalSetStatus= ()=>{
+        setModalState(true)
+    }
 
     const onChangeHandler = (e) => {
         e.preventDefault();
@@ -31,6 +37,7 @@ const SignIn = () => {
     //const security = useSelector(getSecurity);
     const dispatch = useDispatch();
     const onBotonClickHandler = (e) => {
+        modalSetStatus();
         e.preventDefault();
         e.stopPropagation();
         console.log("click");
@@ -72,38 +79,42 @@ const SignIn = () => {
             );
     }
     return (
-        <section className="login" >
-            <TopHeader />
-            <section className="login-form" >
-            <form className="form" >
-                <p className="form-tittle" >Crear usuario</p>
+        <>
+            <section className="login" >
+            <Modal active={modalState}/>
+                <TopHeader />
+                <section className="login-form" >
+                    <form className="form" >
+                        <p className="form-tittle" >Crear usuario</p>
 
-                <div className="form-inputs">
-                    <Input
-                        tipe="text"
-                        label="Correo electronico"
-                        name="txtCorreo"
-                        onChange={onChangeHandler}
-                    ></Input>
+                        <div className="form-inputs">
+                            <Input
+                                tipe="text"
+                                label="Correo electronico"
+                                name="txtCorreo"
+                                onChange={onChangeHandler}
+                            ></Input>
 
-                    <Input
-                        tipe="password"
-                        label="Contraseña"
-                        name="txtPassword"
-                        onChange={onChangeHandler}
-                    ></Input>
-                </div>
+                            <Input
+                                tipe="password"
+                                label="Contraseña"
+                                name="txtPassword"
+                                onChange={onChangeHandler}
+                            ></Input>
+                        </div>
 
 
-                <Button
-                    text="Crear"
-                    onClick={onBotonClickHandler}
-                />
+                        <Button
+                            text="Crear"
+                            onClick={onBotonClickHandler}
+                            ruta={""}
+                        />
 
-            </form>
+                    </form>
+                </section>
+                <Footer />
             </section>
-            <Footer />
-        </section>
+        </>
     )
 
 }

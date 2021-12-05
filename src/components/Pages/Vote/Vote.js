@@ -104,7 +104,9 @@ const Vote = () => {
                         </section>
                     </>
                     :
-                    <WarningVote />
+                    <WarningVote 
+                                hora={user.horaDeDisponibilidad}
+                    />
 
 
             }

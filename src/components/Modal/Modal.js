@@ -3,14 +3,17 @@ import './Modal.css';
 
 
 
-const Modal = () => {
+const Modal = ({active}) => {
+    
     return (
-        <>
-            <section>
-                <p>Multiverso Confirmado</p>
+        <div className={`${active ? "modal modal-active " : "modal"}`} >
+        <Link to="/users/login">
+            <section className="modal-image" >
+                <p className="modal-titulo" >Multiverso Confirmado</p>
                 <p>¡Creaste tu Cuenta Sherli.2!</p>
             </section>
-        </>
+        </Link>
+        </div>
     )
 }
 

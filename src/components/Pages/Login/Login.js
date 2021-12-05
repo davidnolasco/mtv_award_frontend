@@ -100,8 +100,8 @@ const Login = () => {
                 <Button
                     text="Iniciar"
                     onClick={onBotonClickHandler}
+                    ruta={"/users/vote"}
                 />
-                {JSON.stringify(security)}
 
             </form>
             </section>
