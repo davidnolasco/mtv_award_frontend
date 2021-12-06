@@ -3,12 +3,12 @@ import "./WarningVote.css";
 const WarningVote = ({ hora }) => {
     const horaComppleta = (hora) => {
         let hour = new Date(hora).getHours().toString();
-        /*  let minutos = new Date(hora).getMinutes().toString();
-         let segundos = new Date(hora).getHours().toString(); */
+        let minutos = new Date(hora).getMinutes().toString();
+        /*   let segundos = new Date(hora).getHours().toString(); */
         //let tiempoCompleto = tiempo
 
 
-        return `${hour} horas`//: ${minutos} : ${segundos}`;
+        return `${hour} horas : ${minutos}`//: ${minutos} : ${segundos}`;
     }
     return (
         <section className="WarningVote">

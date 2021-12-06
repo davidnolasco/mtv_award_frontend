@@ -47,7 +47,7 @@ const Vote = () => {
         <section className="vote" >
             <TopHeader />
             {
-                user.horaDeDisponibilidad > new Date().getTime()
+                new Date().getTime() > user.horaDeDisponibilidad
                     ?
                     <>
                         <section className="vote-container" >
@@ -100,6 +100,7 @@ const Vote = () => {
                             <br />
                             <Button onClick={getValues}
                                 text="Enviar votos"
+                                ruta=""
                             />
                         </section>
                     </>
