@@ -24,8 +24,8 @@ const Card =({urlImage, artistName, nomination, idNomination}) => {
         <header  className="card-header" >
             <img  className="card-image" src={urlImage} alt="Imagen de la carta"/>
             <div className="card-text" >
-                <p>{artistName}</p>
-                <p>{nomination}</p>
+                <p className="card-text-parrafo" >{artistName}</p>
+                <p className="card-text-parrafo" >{nomination}</p>
             </div>
         </header>
         <footer className="card-footer" >

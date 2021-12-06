@@ -2,22 +2,31 @@
     border-radius: 16px;
 }
 
+.card-header{
+    height: 18rem;
+}
 .card-image{
     width: 18rem;
     border-radius: 16px 16px 0px 0px;   
 }
 
 .card-text{
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0), #000000d2 60%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), #000000d2 110%);;
+    height: 18rem;
     transform: translatey(-100%);
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .card-text p{
     margin-left:1rem;
 }
 
+.card-text p:nth-child(1){
+    margin-bottom: 1rem;
+}
+
 .card-footer{
-    transform: translatey(-50%);
     color: #000;
     background: #FFFFFF;
     border-radius: 0px 0px 16px 16px;
@@ -29,6 +38,7 @@
 }
 
 .card-buttoncircle{
+    border: none;
     background-color: #c4c4c4;
     width: 2rem;
     display: flex;
