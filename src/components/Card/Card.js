@@ -5,12 +5,12 @@ import "./card.css";
 
 const Card =({urlImage, artistName, nomination, idNomination}) => {
     
-    const [contador, setcontador] =useState(1);
+    const [contador, setcontador] =useState(0);
 
     function contadorrVotos(valor) {
         
-        if(contador>20){
-            setcontador(20)
+        if(contador>19){
+            setcontador(contador-20)
         }else{
             setcontador(contador+valor);
         }
@@ -18,6 +18,7 @@ const Card =({urlImage, artistName, nomination, idNomination}) => {
         if(contador<0){
             setcontador(0)
         }
+
     }
     return(
         <div className="card" id={idNomination} >
